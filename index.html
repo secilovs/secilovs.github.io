@@ -1,55 +1,439 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Seçil Bayar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>An Unfinished Journey</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f2f5f7;
+  font-family: 'Source Sans 3', sans-serif;
+  background: #faf6f1;
+  color: #2a1a1a;
 }
-.header {
-    background: #1f3c4d;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+
+/* NAVBAR */
+nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
 }
-.section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #f0e0cc;
+  letter-spacing: 1px;
 }
-h2 {
-    color: #1f3c4d;
+
+.nav-links a {
+  color: #d4b896;
+  text-decoration: none;
+  margin-left: 32px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.card {
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+.nav-links a:hover { color: #f0e0cc; }
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.hero svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* MAIN LAYOUT */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  padding: 48px 0;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: sticky;
+  top: 32px;
+  height: fit-content;
+}
+
+.about-box {
+  background: #fff;
+  border: 1px solid #e8d8c8;
+  border-radius: 4px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.about-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7a3d2a;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8d8c8;
+}
+
+.about-box p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #5a4a3a;
+}
+
+.categories-box {
+  background: #fff;
+  border: 1px solid #e8d8c8;
+  border-radius: 4px;
+  padding: 28px;
+}
+
+.categories-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7a3d2a;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8d8c8;
+}
+
+.cat-link {
+  display: block;
+  padding: 10px 0;
+  color: #5a4a3a;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #f0e8e0;
+}
+
+.cat-link:hover { color: #7a3d2a; }
+
+.cat-link span {
+  float: right;
+  background: #f0e0cc;
+  color: #7a3d2a;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+/* POSTS */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7a3d2a;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #7a3d2a;
+}
+
+.post-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  background: #fff;
+  border: 1px solid #e8d8c8;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 20px rgba(122,61,42,0.1);
+}
+
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.post-card-body {
+  padding: 24px 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-category {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7a3d2a;
+  margin-bottom: 8px;
+}
+
+.post-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2a1a1a;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.post-card p {
+  font-size: 14px;
+  color: #7a6a5a;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.read-more {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #7a3d2a;
+  text-decoration: none;
+  border-bottom: 1px solid #7a3d2a;
+  padding-bottom: 2px;
+}
+
+/* CONTACT */
+.contact-section {
+  background: #f5ede0;
+  padding: 64px 0;
+  margin-top: 32px;
+}
+
+.contact-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  text-align: center;
+  color: #2a1a1a;
+  margin-bottom: 32px;
+}
+
+.contact-form {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #c8a882;
+  background: transparent;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  color: #2a1a1a;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 80px;
+  resize: none;
+  margin-bottom: 24px;
+}
+
+.submit-btn {
+  display: block;
+  margin: 0 auto;
+  background: #7a3d2a;
+  color: #f0e0cc;
+  border: none;
+  padding: 12px 40px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.submit-btn:hover { background: #5c2d1a; }
+
+/* FOOTER */
+footer {
+  background: #2a1a1a;
+  color: #c8a882;
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
 }
 </style>
 </head>
 <body>
 
-<div style="text-align:center; margin-top:100px;">
-  <h1>Seçil Bayar</h1>
-  <p>Environmental Engineering & AI Research</p>
-
-  <a href="blog.html" style="
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 20px;
-    background:#1f3c4d;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-  ">
-    Go to Blog 
-  </a>
+<!-- HERO -->
+<div class="hero">
+<nav>
+  <div class="nav-logo">An Unfinished Journey</div>
+  <div class="nav-links">
+    <a href="#environment">Environment</a>
+    <a href="#ai">AI</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+<svg viewBox="0 0 1400 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2a2a"/>
+      <stop offset="45%" stop-color="#7a4a4a"/>
+      <stop offset="100%" stop-color="#c4a882"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="380" fill="url(#sky)"/>
+  <polygon points="0,240 80,185 180,210 280,165 380,195 460,172 540,188 620,168 700,180 780,165 860,185 940,170 1020,188 1100,168 1180,182 1260,170 1340,178 1400,172 1400,280 0,280" fill="#4a2e2e" opacity="0.55"/>
+  <polygon points="0,260 90,228 190,245 290,218 390,238 480,222 580,240 670,220 760,238 850,222 950,240 1040,224 1140,242 1230,226 1320,240 1400,228 1400,300 0,300" fill="#3a2020" opacity="0.7"/>
+  <ellipse cx="700" cy="295" rx="500" ry="45" fill="#c8b4a0" opacity="0.35"/>
+  <ellipse cx="700" cy="288" rx="380" ry="30" fill="#d4c4b4" opacity="0.25"/>
+  <polygon points="0,380 0,268 22,232 44,380" fill="#1a0f0f"/>
+  <polygon points="30,380 44,235 62,380" fill="#1a0f0f"/>
+  <polygon points="58,380 74,228 92,380" fill="#220f0f"/>
+  <polygon points="86,380 104,222 122,380" fill="#1a0f0f"/>
+  <polygon points="115,380 134,228 152,380" fill="#220f0f"/>
+  <polygon points="145,380 162,232 180,380" fill="#1a0f0f"/>
+  <polygon points="175,380 192,225 210,380" fill="#220f0f"/>
+  <polygon points="205,380 222,230 240,380" fill="#1a0f0f"/>
+  <polygon points="235,380 250,235 268,380" fill="#220f0f"/>
+  <polygon points="262,380 278,228 296,380" fill="#1a0f0f"/>
+  <polygon points="290,380 305,232 322,380" fill="#220f0f"/>
+  <polygon points="318,380 332,238 350,380" fill="#1a0f0f"/>
+  <polygon points="345,380 358,242 375,380" fill="#220f0f"/>
+  <polygon points="370,380 384,238 400,380" fill="#1a0f0f"/>
+  <polygon points="1000,380 1014,238 1030,380" fill="#1a0f0f"/>
+  <polygon points="1028,380 1042,232 1060,380" fill="#220f0f"/>
+  <polygon points="1055,380 1070,228 1088,380" fill="#1a0f0f"/>
+  <polygon points="1082,380 1098,235 1115,380" fill="#220f0f"/>
+  <polygon points="1110,380 1126,230 1144,380" fill="#1a0f0f"/>
+  <polygon points="1140,380 1155,225 1172,380" fill="#220f0f"/>
+  <polygon points="1168,380 1184,232 1202,380" fill="#1a0f0f"/>
+  <polygon points="1196,380 1212,228 1230,380" fill="#220f0f"/>
+  <polygon points="1225,380 1240,235 1258,380" fill="#1a0f0f"/>
+  <polygon points="1253,380 1268,230 1286,380" fill="#220f0f"/>
+  <polygon points="1280,380 1296,228 1314,380" fill="#1a0f0f"/>
+  <polygon points="1308,380 1324,232 1342,380" fill="#220f0f"/>
+  <polygon points="1336,380 1352,238 1370,380" fill="#1a0f0f"/>
+  <polygon points="1362,380 1378,242 1396,380" fill="#220f0f"/>
+  <circle cx="1150" cy="88" r="4" fill="#c8a882" opacity="0.7"/>
+  <circle cx="1210" cy="118" r="3" fill="#b89870" opacity="0.65"/>
+  <circle cx="1268" cy="72" r="2.5" fill="#c8a882" opacity="0.6"/>
+  <circle cx="1185" cy="148" r="3.5" fill="#b89870" opacity="0.65"/>
+  <circle cx="1240" cy="98" r="2" fill="#c8a882" opacity="0.55"/>
+  <circle cx="1290" cy="130" r="3" fill="#b89870" opacity="0.6"/>
+  <circle cx="1320" cy="85" r="2" fill="#c8a882" opacity="0.5"/>
+  <circle cx="1350" cy="115" r="2.5" fill="#b89870" opacity="0.55"/>
+  <line x1="1150" y1="88" x2="1210" y2="118" stroke="#9a7855" stroke-width="0.7" opacity="0.45" fill="none"/>
+  <line x1="1210" y1="118" x2="1268" y2="72" stroke="#9a7855" stroke-width="0.7" opacity="0.4" fill="none"/>
+  <line x1="1210" y1="118" x2="1185" y2="148" stroke="#9a7855" stroke-width="0.7" opacity="0.45" fill="none"/>
+  <line x1="1268" y1="72" x2="1320" y2="85" stroke="#9a7855" stroke-width="0.7" opacity="0.35" fill="none"/>
+  <line x1="1185" y1="148" x2="1290" y2="130" stroke="#9a7855" stroke-width="0.7" opacity="0.4" fill="none"/>
+  <line x1="1290" y1="130" x2="1350" y2="115" stroke="#9a7855" stroke-width="0.7" opacity="0.35" fill="none"/>
+  <rect x="0" y="0" width="1400" height="380" fill="#1a0808" opacity="0.28"/>
+  <line x1="480" y1="148" x2="920" y2="148" stroke="#8a5a3a" stroke-width="0.8" opacity="0.65"/>
+  <text x="700" y="196" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#f0e0cc" letter-spacing="4">An Unfinished Journey</text>
+  <text x="700" y="228" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="400" fill="#c8a882" letter-spacing="3">Notes on environment, AI, and everything in between.</text>
+  <line x1="480" y1="244" x2="920" y2="244" stroke="#8a5a3a" stroke-width="0.8" opacity="0.65"/>
+</svg>
 </div>
+
+<!-- MAIN -->
+<div class="container">
+<div class="main-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="about-box" id="about">
+      <h3>About</h3>
+      <p>PhD in Environmental Engineering. LLM evaluator. Writing at the intersection of ecology, data, and artificial intelligence.</p>
+    </div>
+    <div class="categories-box">
+      <h3>Categories</h3>
+      <a href="#environment" class="cat-link">🌿 Environment <span>0</span></a>
+      <a href="#ai" class="cat-link">🤖 AI <span>0</span></a>
+    </div>
+  </aside>
+
+  <!-- POSTS -->
+  <main>
+    <div id="environment">
+      <div class="section-title">Environment</div>
+      <div class="post-card">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=480&q=80" alt="Environment">
+        <div class="post-card-body">
+          <div class="post-category">Environment</div>
+          <h2>Your first post title here</h2>
+          <p>A short description of your article goes here. Two or three sentences to draw the reader in.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="ai" style="margin-top: 48px;">
+      <div class="section-title">AI</div>
+      <div class="post-card">
+        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=480&q=80" alt="AI">
+        <div class="post-card-body">
+          <div class="post-category">AI</div>
+          <h2>Your first AI post title here</h2>
+          <p>A short description of your article goes here. Two or three sentences to draw the reader in.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="container">
+    <h2>Let me know what's on your mind</h2>
+    <div class="contact-form">
+      <div class="form-row">
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Last name">
+      </div>
+      <input type="email" placeholder="Email" style="width:100%;margin-bottom:16px;">
+      <textarea placeholder="Leave a message..."></textarea>
+      <button class="submit-btn">Submit</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 An Unfinished Journey
+</footer>
 
 </body>
 </html>
