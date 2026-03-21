@@ -3,7 +3,14 @@ html {
 }:root { --teal-dark:#1f3c4d; --teal-mid:#2a5068; --accent:#3a9e8f; --accent-light:#e6f4f1; --bg:#f4f6f8; --white:#ffffff; --text:#2c2c2c; --text-muted:#6b7280; --border:#e2e8f0; }
 * { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:'Source Sans 3',sans-serif; background:var(--bg); color:var(--text); }
-.header { background:var(--teal-dark); color:white; padding:40px 40px 28px; }
+.header {
+  background:var(--teal-dark);
+  color:white;
+  padding:40px 40px 28px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .header-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:12px; }
 .logo { font-size:11px; letter-spacing:0.12em; opacity:0.6; text-transform:uppercase; }
 .header-right { display:flex; align-items:center; gap:24px; }
