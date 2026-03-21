@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Environmental Systems & AI Journal</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -14,156 +14,65 @@
     <div class="logo">Environmental Systems & AI Journal</div>
     <div class="header-right">
       <nav class="nav">
-        <a href="#" class="lang-aware" data-tr="Çevresel Konular" data-en="Environmental Topics">Çevresel Konular</a>
-        <a href="#" class="lang-aware" data-tr="AI Gelişim" data-en="AI Progress">AI Gelişim</a>
-        <a href="#" class="lang-aware" data-tr="Hakkında" data-en="About">Hakkında</a>
+        <a href="#section-env">Environmental Topics</a>
+        <a href="#section-ai">AI Progress</a>
+        <a href="#about">About</a>
       </nav>
-      <div class="lang-switch">
-        <button class="lang-btn active" onclick="setLang('tr',event)">TR</button>
-        <button class="lang-btn" onclick="setLang('en',event)">EN</button>
-      </div>
     </div>
   </div>
-  <h1 class="lang-aware" data-tr="Çevre Araştırma Bülteni" data-en="Environmental Research Briefs">Çevre Araştırma Bülteni</h1>
-  <p class="lang-aware" data-tr="Çevre sistemlerinde seçilmiş haberler, araştırma özetleri ve bilimsel gelişmeler — yapay zeka perspektifiyle." data-en="Selected news, research highlights, and scientific developments in environmental systems — through an AI-informed lens.">Çevre sistemlerinde seçilmiş haberler, araştırma özetleri ve bilimsel gelişmeler — yapay zeka perspektifiyle.</p>
+  <h1>Environmental Research Briefs</h1>
+  <p>Selected news, research highlights, and scientific developments in environmental systems — through an AI-informed lens.</p>
   <div class="filter-row">
-    <div class="filter-pill active lang-aware" data-tr="Tümü" data-en="All">Tümü</div>
-    <div class="filter-pill lang-aware" data-tr="Su Güvenliği" data-en="Water Security">Su Güvenliği</div>
-    <div class="filter-pill lang-aware" data-tr="İklim & Çatışma" data-en="Climate & Conflict">İklim & Çatışma</div>
-    <div class="filter-pill lang-aware" data-tr="Desalinasyon" data-en="Desalination">Desalinasyon</div>
-    <div class="filter-pill lang-aware" data-tr="Orta Doğu" data-en="Middle East">Orta Doğu</div>
+    <div class="filter-pill active">All</div>
+    <div class="filter-pill">Water Security</div>
+    <div class="filter-pill">Climate & Conflict</div>
+    <div class="filter-pill">Desalination</div>
+    <div class="filter-pill">Middle East</div>
   </div>
 </div>
 
 <div class="body-wrap">
   <div class="main-col">
-    <div class="section-label lang-aware" data-tr="Öne Çıkan Yazı" data-en="Featured Article">Öne Çıkan Yazı</div>
 
-    <div class="featured-card">
-      <div class="featured-img">
-        <div>
-          <span class="tag lang-aware" data-tr="Su Güvenliği" data-en="Water Security">Su Güvenliği</span>
-          <div class="featured-title lang-aware" data-tr="Savaşın Görünmez Cephesi: Su" data-en="The Silent Front: Water">Savaşın Görünmez Cephesi: Su</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="lang-aware" data-tr="Körfez'deki desalinasyon tesislerine yönelik saldırılar, iklim stresinin derinleştirdiği bir bölgede su güvenliğinin ne denli kırılgan olduğunu gözler önüne seriyor." data-en="Strikes on Gulf desalination plants reveal just how fragile water security is in a region already under severe climate stress.">Körfez'deki desalinasyon tesislerine yönelik saldırılar, iklim stresinin derinleştirdiği bir bölgede su güvenliğinin ne denli kırılgan olduğunu gözler önüne seriyor.</p>
-        <div class="card-meta">
-          <span>Seçil Bayar</span><div class="meta-dot"></div>
-          <span class="lang-aware" data-tr="Mart 2026" data-en="March 2026">Mart 2026</span><div class="meta-dot"></div>
-          <span class="lang-aware" data-tr="8 dk okuma" data-en="8 min read">8 dk okuma</span>
-        </div>
-        <br>
-        <button class="read-more-btn" onclick="toggleArticle(this)" data-tr-open="Yazıyı Oku ↓" data-tr-close="Kapat ↑" data-en-open="Read Article ↓" data-en-close="Close ↑">Yazıyı Oku ↓</button>
-      </div>
+    <div id="section-env">
+      <div class="section-label">Featured Article</div>
 
-      <div class="article-content" id="article-main">
-
-        <!-- TÜRKÇE -->
-        <div class="lang-tr">
-          <h2>Körfez'in Paradoksu</h2>
-          <p>Mart 2026. Orta Doğu'da çatışmalar alevlenirken dünya gözlerini füzelere ve savaş uçaklarına dikti. Ama bu savaşın sessiz cephesinde bambaşka bir hedef vardı: su.</p>
-          <p>Körfez bölgesi, yeraltında muazzam petrol ve doğalgaz rezervleri barındıran, bu zenginliğiyle dünya ekonomisini derinden etkileyen bir coğrafya. Ancak aynı topraklar, bir o kadar ciddi bir yokluğu da barındırıyor: tatlı su. Dünyanın en zengin petrol ülkeleri, aynı zamanda dünyanın en susuz ülkeleri.</p>
-          <h2>Su Kıtlığı</h2>
-          <p>Körfez'de yıllık yağış miktarı ortalama 70 ile 130 milimetre arasında — bazı noktalarda ise yağmur neredeyse hiç yağmıyor. NASA verilerine göre Orta Doğu, 1998'den bu yana son 900 yılın en şiddetli kuraklığını yaşıyor. Dünyanın en su stresli 10 ülkesinin 7'si bu bölgede bulunuyor; bu ülkelerde yıllık su çekimi, yenilenebilir su kaynaklarının sekiz katına ulaşıyor. BM Dünya Su Kalkınma Raporu 2024'e göre bölge nüfusunun yüzde 83'ü aşırı yüksek su stresi altında yaşıyor. Bahreyn, Kuveyt, Umman ve Katar en kritik ülkeler arasında yer alıyor.</p>
-          <h2>Desalinasyon: Hayati Çözüm, Kırılgan Sistem</h2>
-          <p>Bu koşullar altında Körfez ülkeleri 1938'den bu yana deniz suyunu arıtarak içme suyuna dönüştüren desalinasyon tesislerine yöneldi. Bugün Kuveyt'in içme suyunun yüzde 90'ı, Umman'ın yüzde 86'sı, Suudi Arabistan'ın yüzde 70'i bu tesislerden geliyor. Körfez bölgesi, dünyada üretilen desalinize suyun yaklaşık yüzde 40'ını tek başına karşılıyor; bölge kıyılarında 400'den fazla tesis faaliyet gösteriyor. Ancak bu sistem son derece kırılgan: büyük şehirlerin suyu yalnızca birkaç büyük tesise bağlı. Üstelik tesislerin büyük çoğunluğu elektrik santralleriyle birlikte çalışıyor — yani enerji altyapısına yapılan bir saldırı, su üretimini de anında sekteye uğratabiliyor. Bu kırılganlık yeni değil: 1990-1991 Körfez Savaşı'nda Irak kuvvetleri Kuveyt'in desalinasyon kapasitesinin büyük bölümünü kasıtlı olarak tahrip etmişti. O emsal, bugün yeniden gündemin merkezine oturdu.</p>
-          <h2>Saldırılar: Bir Bölge Tehdit Altında</h2>
-          <p>Mart 2026'daki çatışmalar su altyapısını doğrudan hedef aldı. ABD, Bahreyn'deki Jufair üssünden fırlatılan füzelerle İran'ın Hürmüz Boğazı girişindeki Qeshm Adası'ndaki desalinasyon tesisini vurdu. İran Dışişleri Bakanlığı'na göre bu saldırı 30 köyün su tedarikini doğrudan etkiledi; binlerce kişi güvensiz su kaynaklarına yönelmek zorunda kaldı ve bölgede su kaynaklı hastalık riski önemli ölçüde arttı. BM Üniversitesi Su, Çevre ve Sağlık Enstitüsü Direktörü Kaveh Madani bu saldırıyı "bölge için bir alarm zili" olarak nitelendirdi.</p>
-          <p>Ancak Qeshm tek hedef değildi. Aynı günlerde İran'ın insansız hava aracıyla Bahreyn'deki bir desalinasyon tesisine de zarar verdiği açıklandı. BAE'deki Fujairah'ta bir güç ve su kompleksine yakın füze enkazı düştü. Dubai'nin Jebel Ali limanına düzenlenen saldırı ise şehrin yıllık 600 milyon metreküpten fazla su ürettiği 43 desalinasyon ünitesine tehlikeli biçimde yaklaştı. Kuveyt'te ele geçirilen bir insansız hava aracının enkazı Doha West Güç ve Su Tesisi'nde yangına yol açtı.</p>
-          <p>Analistler bu tablonun tesadüf olmadığını vurguluyor: su tesisleri sabit, kıyısal ve yüksek değerli hedefler — stratejik açıdan son derece cazip. İran'ın ayda yaklaşık 10.000 drone üretme kapasitesine sahip olduğu düşünüldüğünde tehdidin boyutu daha da netleşiyor.</p>
-          <p>Bu saldırılar uluslararası hukuk açısından da ciddi sorular doğurdu: Cenevre Sözleşmeleri, sivil halkın hayatta kalması için zorunlu su tesislerine yönelik saldırıları açıkça yasaklıyor.</p>
-          <div class="map-wrap">
-            <svg width="100%" viewBox="0 0 960 700" style="font-family:sans-serif;display:block;">
-              <rect x="3" y="3" width="954" height="694" rx="10" fill="none" stroke="#1f3c4d" stroke-width="1.5"/>
-              <text x="480" y="32" text-anchor="middle" fill="#1f3c4d" font-size="14" font-weight="700">Mart 2026 — Saldırıya Uğrayan Su Altyapısı Tesisleri</text>
-              <text x="480" y="50" text-anchor="middle" fill="#6b7280" font-size="11">Körfez bölgesinde beş kritik nokta tehdit altına girdi</text>
-              <ellipse cx="480" cy="340" rx="205" ry="88" fill="#b8d4e8"/>
-              <ellipse cx="668" cy="306" rx="58" ry="28" fill="#8fb8d4"/>
-              <path d="M215,215 Q288,190 365,198 Q442,205 512,193 Q574,184 632,206 Q679,222 699,260 Q687,281 664,291 Q631,285 598,291 Q564,297 540,308 Q518,318 495,322 Q470,320 445,314 Q419,310 393,307 Q362,304 331,307 Q308,311 285,315 Q263,318 240,310 Q218,297 204,281 Q190,262 215,237Z" fill="#e8f0d8" stroke="#c4bfb0" stroke-width="0.8"/>
-              <path d="M192,358 Q235,344 278,338 Q322,333 366,335 Q410,336 453,335 Q496,333 536,330 Q572,327 603,324 Q634,321 654,327 Q665,344 658,366 Q641,388 606,398 Q562,408 517,412 Q463,415 407,416 Q351,417 298,415 Q252,408 219,397 Q188,385 177,369Z" fill="#f5e6d0" stroke="#c4bfb0" stroke-width="0.8"/>
-              <ellipse cx="326" cy="338" rx="18" ry="12" fill="#f0d8e0" stroke="#c4bfb0" stroke-width="0.8"/>
-              <path d="M180,296 Q194,283 210,287 Q221,295 224,311 Q222,331 211,344 Q200,354 188,356 Q175,351 172,333 Q169,314 180,296Z" fill="#e8ddf5" stroke="#c4bfb0" stroke-width="0.8"/>
-              <path d="M632,206 Q666,210 699,224 Q727,237 748,255 Q764,270 767,290 Q764,310 752,322 Q737,333 716,337 Q694,340 674,335 Q655,330 639,321 Q622,311 610,302 Q599,294 595,288 Q602,281 616,275 Q632,268 645,259 Q660,247 668,233 Q657,217 635,210 Q633,207 632,206Z" fill="#d8eee0" stroke="#c4bfb0" stroke-width="0.8"/>
-              <text x="438" y="244" text-anchor="middle" fill="#6b7a85" font-size="11" font-style="italic">İRAN</text>
-              <text x="422" y="382" text-anchor="middle" fill="#6b7a85" font-size="10" font-style="italic">SUUDİ ARABİSTAN</text>
-              <text x="196" y="324" text-anchor="middle" fill="#6b7a85" font-size="9" font-style="italic">KVT</text>
-              <text x="700" y="268" text-anchor="middle" fill="#6b7a85" font-size="9" font-style="italic">BAE</text>
-              <text x="326" y="340" text-anchor="middle" fill="#6b7a85" font-size="8">BHR</text>
-              <text x="562" y="294" text-anchor="middle" fill="#4a6878" font-size="9" font-style="italic">Hürmüz Boğazı</text>
-              <text x="420" y="318" text-anchor="middle" fill="#4a6878" font-size="9" font-style="italic">Körfez</text>
-              <line x1="572" y1="268" x2="80" y2="100" stroke="#c0392b" stroke-width="1" stroke-dasharray="5 3"/>
-              <line x1="315" y1="334" x2="80" y2="230" stroke="#c0392b" stroke-width="1" stroke-dasharray="5 3"/>
-              <line x1="695" y1="232" x2="790" y2="110" stroke="#e67e22" stroke-width="1" stroke-dasharray="5 3"/>
-              <line x1="685" y1="318" x2="790" y2="460" stroke="#e67e22" stroke-width="1" stroke-dasharray="5 3"/>
-              <line x1="188" y1="340" x2="80" y2="490" stroke="#e67e22" stroke-width="1" stroke-dasharray="5 3"/>
-              <rect x="20" y="65" width="178" height="44" rx="5" fill="#1f3c4d"/>
-              <text x="30" y="82" fill="white" font-size="11" font-weight="500">Qeshm Adası — İran</text>
-              <text x="30" y="98" fill="#9fcec4" font-size="10">ABD hava saldırısı · 30 köy</text>
-              <rect x="20" y="198" width="178" height="44" rx="5" fill="#1f3c4d"/>
-              <text x="30" y="215" fill="white" font-size="11" font-weight="500">Bahreyn Tesisi</text>
-              <text x="30" y="231" fill="#9fcec4" font-size="10">İran drone saldırısı</text>
-              <rect x="762" y="78" width="178" height="44" rx="5" fill="#1f3c4d"/>
-              <text x="772" y="95" fill="white" font-size="11" font-weight="500">Fujairah F1 — BAE</text>
-              <text x="772" y="111" fill="#f0c070" font-size="10">Füze enkazı yakınına düştü</text>
-              <rect x="762" y="430" width="168" height="44" rx="5" fill="#1f3c4d"/>
-              <text x="772" y="447" fill="white" font-size="11" font-weight="500">Jebel Ali — Dubai</text>
-              <text x="772" y="463" fill="#f0c070" font-size="10">Saldırı tesise yaklaştı</text>
-              <rect x="20" y="460" width="178" height="44" rx="5" fill="#1f3c4d"/>
-              <text x="30" y="477" fill="white" font-size="11" font-weight="500">Doha West — Kuveyt</text>
-              <text x="30" y="493" fill="#f0c070" font-size="10">Drone enkazı, yangın çıktı</text>
-              <circle cx="580" cy="272" r="9" fill="#c0392b" stroke="white" stroke-width="2"/>
-              <text x="580" y="276" text-anchor="middle" fill="white" font-size="10" font-weight="500">1</text>
-              <circle cx="326" cy="338" r="9" fill="#c0392b" stroke="white" stroke-width="2"/>
-              <text x="326" y="342" text-anchor="middle" fill="white" font-size="10" font-weight="500">2</text>
-              <circle cx="700" cy="226" r="9" fill="#e67e22" stroke="white" stroke-width="2"/>
-              <text x="700" y="230" text-anchor="middle" fill="white" font-size="10" font-weight="500">3</text>
-              <circle cx="690" cy="335" r="9" fill="#e67e22" stroke="white" stroke-width="2"/>
-              <text x="690" y="339" text-anchor="middle" fill="white" font-size="10" font-weight="500">4</text>
-              <circle cx="196" cy="334" r="9" fill="#e67e22" stroke="white" stroke-width="2"/>
-              <text x="196" y="338" text-anchor="middle" fill="white" font-size="10" font-weight="500">5</text>
-              <rect x="380" y="590" width="200" height="64" rx="6" fill="#1f3c4d"/>
-              <circle cx="400" cy="609" r="7" fill="#c0392b" stroke="white" stroke-width="1.5"/>
-              <text x="414" y="613" fill="white" font-size="11">Doğrudan hasar</text>
-              <circle cx="400" cy="635" r="7" fill="#e67e22" stroke="white" stroke-width="1.5"/>
-              <text x="414" y="639" fill="white" font-size="11">Yakın tehlike</text>
-            </svg>
-          </div>
-          <h2>Bölgesel ve Küresel Etkiler</h2>
-          <p>Bu saldırıların etkileri yalnızca bölgeyle sınırlı kalmıyor. İran'ın Hürmüz Boğazı'nı kapatmasıyla dünya petrol ticaretinin yaklaşık yüzde 20'si sekteye uğradı; petrol tankerleri Afrika'nın etrafından dolaşmak zorunda kaldı. Dünya gübre ticaretinin üçte biri de bu boğazdan geçtiği için küresel gıda fiyatları üzerinde ciddi bir baskı oluştu. Uzmanlar asıl tehlikenin önümüzdeki aylarda su kıtlığı olarak kendini göstereceği konusunda uyarıyor. Global Water Intelligence'tan Ed Cullinane durumu şöyle özetliyor: süregelen saldırılar, ekonomik kriz ve ciddi bir su kıtlığıyla birlikte bu yazın nasıl geçeceğini düşünmek bile zor.</p>
-          <div class="references">
-            <h3>Kaynaklar</h3>
-            <ol>
-              <li>BM Dünya Su Kalkınma Raporu, 2024</li>
-              <li>NASA Jet Propulsion Laboratory — Orta Doğu Kuraklık Araştırması, 2022</li>
-              <li>World Resources Institute — Aqueduct Water Risk Atlas, 2023</li>
-              <li>Global Water Intelligence — Gulf Desalination Report</li>
-              <li>Baker Institute / Rice University — GCC Water Security Analysis</li>
-              <li>CSIS — Water and Conflict in the Middle East</li>
-              <li>Pacific Institute — Water Conflict Chronology, 2023</li>
-              <li>BM Üniversitesi Su, Çevre ve Sağlık Enstitüsü — Kaveh Madani, 2026</li>
-              <li>Sembcorp Industries — Fujairah F1 Açıklaması, Mart 2026</li>
-              <li>Cenevre Sözleşmeleri Ek Protokol I, Madde 54 — ICRC</li>
-              <li>ScienceDirect — Desalination and Climate Change, 2025</li>
-              <li>Peter Gleick — Water as a Weapon of War, Springer, 2019</li>
-            </ol>
+      <div class="featured-card">
+        <div class="featured-img">
+          <div>
+            <span class="tag">Water Security</span>
+            <div class="featured-title">The Silent Front: Water</div>
           </div>
         </div>
+        <div class="card-body">
+          <p>Strikes on Gulf desalination plants reveal just how fragile water security is in a region already under severe climate stress.</p>
+          <div class="card-meta">
+            <span>Seçil Bayar</span><div class="meta-dot"></div>
+            <span>March 2026</span><div class="meta-dot"></div>
+            <span>8 min read</span>
+          </div>
+          <br>
+          <button class="read-more-btn" onclick="toggleArticle(this)">Read Article ↓</button>
+        </div>
 
-        <!-- ENGLISH -->
-        <div class="lang-en" style="display:none;">
+        <div class="article-content" id="article-main">
+
           <h2>The Gulf's Paradox</h2>
           <p>March 2026. As conflicts escalated across the Middle East, the world's eyes turned to missiles and fighter jets. But on the quieter front of this war, there was a very different target: water.</p>
           <p>The Gulf region sits on some of the world's most enormous oil and gas reserves — wealth that shapes the global economy. Yet beneath that same surface lies an equally serious absence: fresh water. The world's richest oil nations are, at the same time, among its most water-scarce.</p>
+
           <h2>Water Scarcity</h2>
           <p>Annual rainfall across the Gulf averages between 70 and 130 millimeters — and in some areas, it barely rains at all. According to NASA, the Middle East has been experiencing its worst drought in 900 years since 1998. Seven of the world's ten most water-stressed countries are in this region, where annual water withdrawals reach up to eight times the available renewable supply. The UN World Water Development Report 2024 found that 83% of the region's population lives under extremely high water stress. Bahrain, Kuwait, Oman, and Qatar rank among the most critical cases.</p>
+
           <h2>Desalination: A Vital Solution, a Fragile System</h2>
           <p>Faced with these conditions, Gulf states have been turning to desalination — converting seawater into drinking water — since 1938. Today, 90% of Kuwait's drinking water, 86% of Oman's, and 70% of Saudi Arabia's comes from these plants. The Gulf alone accounts for roughly 40% of the world's desalinated water, with over 400 facilities operating along its coastline. But the system is deeply fragile: entire cities depend on just a handful of large plants. Most of them run alongside power stations — meaning an attack on the energy grid can knock out water production just as quickly. This vulnerability isn't new. During the 1990–1991 Gulf War, Iraqi forces deliberately destroyed much of Kuwait's desalination capacity. That precedent has come back into sharp focus.</p>
+
           <h2>Attacks: A Region Under Threat</h2>
           <p>The March 2026 conflict struck water infrastructure directly. The US launched missiles from the Jufair base in Bahrain, hitting a desalination plant on Iran's Qeshm Island at the entrance to the Strait of Hormuz. According to Iran's Foreign Ministry, the strike disrupted water supply to 30 villages, forcing thousands to turn to unsafe water sources and significantly raising the risk of waterborne illness in the area. Kaveh Madani, Director of the UN University's Institute for Water, Environment and Health, called the attack "a wake-up call for the region."</p>
           <p>But Qeshm was not the only target. In the same period, Iran was reported to have damaged a desalination plant in Bahrain with a drone. Missile debris landed near a power and water complex in Fujairah, UAE. A strike on Dubai's Jebel Ali port came dangerously close to the city's 43 desalination units, which produce over 600 million cubic meters of water annually. And in Kuwait, debris from an intercepted drone caused a fire at the Doha West Power and Water Station.</p>
           <p>Analysts point out that none of this is coincidental: water facilities are fixed, coastal, high-value targets — strategically hard to resist. With Iran reportedly capable of producing around 10,000 drones per month, the scale of the threat becomes even clearer.</p>
           <p>These attacks also raise serious questions under international law. The Geneva Conventions explicitly prohibit attacks on water facilities essential to civilian survival.</p>
+
           <div class="map-wrap">
             <svg width="100%" viewBox="0 0 960 700" style="font-family:sans-serif;display:block;">
               <rect x="3" y="3" width="954" height="694" rx="10" fill="none" stroke="#1f3c4d" stroke-width="1.5"/>
@@ -220,8 +129,10 @@
               <text x="414" y="639" fill="white" font-size="11">Near miss</text>
             </svg>
           </div>
+
           <h2>Regional and Global Implications</h2>
           <p>The impact of these strikes extends well beyond the region. Iran's closure of the Strait of Hormuz disrupted roughly 20% of global oil trade, forcing tankers to reroute around Africa. Since about a third of the world's fertilizer trade also passes through the strait, global food prices have come under significant pressure. Experts warn that the real crisis may still be coming — in the form of acute water shortages over the months ahead. Ed Cullinane of Global Water Intelligence puts it plainly: with ongoing strikes, an economic crisis, and a serious water shortage all converging, it is hard to even imagine how this summer will unfold.</p>
+
           <div class="references">
             <h3>References</h3>
             <ol>
@@ -239,91 +150,100 @@
               <li>Peter Gleick — Water as a Weapon of War, Springer, 2019</li>
             </ol>
           </div>
-        </div>
 
-        <!-- YORUM ALANI -->
-        <div class="comment-section">
-          <h3 class="comment-title lang-aware" data-tr="Yorumlar" data-en="Comments">Yorumlar</h3>
-          <div class="comment-form">
-            <input type="text" class="comment-input" id="comment-name" placeholder="Adınız">
-            <textarea class="comment-textarea" id="comment-text" placeholder="Yorumunuzu yazın..."></textarea>
-            <button class="comment-btn lang-aware" data-tr="Yorum Gönder" data-en="Submit" onclick="submitComment()">Yorum Gönder</button>
+          <div class="comment-section">
+            <h3 class="comment-title">Comments</h3>
+            <div class="comment-form">
+              <input type="text" class="comment-input" id="comment-name" placeholder="Your name">
+              <textarea class="comment-textarea" id="comment-text" placeholder="Write your comment..."></textarea>
+              <button class="comment-btn" onclick="submitComment()">Submit</button>
+            </div>
+            <div id="comments-list"></div>
           </div>
-          <div id="comments-list"></div>
-        </div>
 
+        </div>
       </div>
     </div>
 
-    <div class="section-label lang-aware" data-tr="DİĞER YAZILAR" data-en="MORE ARTICLES" style="margin-top:8px;">MORE ARTICLES</div>
+    <div class="section-label" style="margin-top:8px;">More Articles</div>
     <div class="card-grid">
       <div class="small-card">
-        <div class="small-card-img blue"><span class="tag lang-aware" style="font-size:10px;" data-tr="AI Gelişim" data-en="AI Progress">AI Gelişim</span></div>
+        <div class="small-card-img green" style="align-items:center;justify-content:center;">
+          <span style="color:rgba(255,255,255,0.35);font-size:11px;font-style:italic;">Coming soon</span>
+        </div>
         <div class="small-card-body">
-          <h4 class="lang-aware" data-tr="RAG Sistemleri: Çevre Mühendisliğinde Uygulamalar" data-en="RAG Systems: Applications in Environmental Engineering">RAG Sistemleri: Çevre Mühendisliğinde Uygulamalar</h4>
-          <p class="lang-aware" data-tr="Groq ve FAISS ile geliştirilen RAG pipeline'ının çevresel veri analizine entegrasyonu." data-en="Integrating a Groq and FAISS-powered RAG pipeline into environmental data analysis.">Groq ve FAISS ile geliştirilen RAG pipeline'ının çevresel veri analizine entegrasyonu.</p>
+          <h4 style="color:var(--text-muted);font-weight:400;font-style:italic;font-size:12px;">Next article in progress</h4>
         </div>
       </div>
       <div class="small-card">
-        <div class="small-card-img green"><span class="tag lang-aware" style="font-size:10px;" data-tr="Çevresel Konular" data-en="Environmental Topics">Çevresel Konular</span></div>
+        <div class="small-card-img green" style="align-items:center;justify-content:center;">
+          <span style="color:rgba(255,255,255,0.35);font-size:11px;font-style:italic;">Coming soon</span>
+        </div>
         <div class="small-card-body">
-          <h4 class="lang-aware" data-tr="İklim-Çatışma Döngüsü: Orta Doğu Vakaları" data-en="The Climate-Conflict Cycle: Middle East Cases">İklim-Çatışma Döngüsü: Orta Doğu Vakaları</h4>
-          <p class="lang-aware" data-tr="Su kıtlığı ve silahlı çatışma arasındaki çift yönlü ilişki üzerine sistematik derleme." data-en="A systematic review on the bidirectional relationship between water scarcity and armed conflict.">Su kıtlığı ve silahlı çatışma arasındaki çift yönlü ilişki üzerine sistematik derleme.</p>
+          <h4 style="color:var(--text-muted);font-weight:400;font-style:italic;font-size:12px;">Next article in progress</h4>
         </div>
       </div>
     </div>
+
+    <div id="section-ai" style="margin-top:40px;">
+      <div class="section-label">AI Progress</div>
+      <div class="card-grid">
+        <div class="small-card">
+          <div class="small-card-img blue" style="align-items:center;justify-content:center;">
+            <span style="color:rgba(255,255,255,0.35);font-size:11px;font-style:italic;">Coming soon</span>
+          </div>
+          <div class="small-card-body">
+            <h4 style="color:var(--text-muted);font-weight:400;font-style:italic;font-size:12px;">First article in progress</h4>
+          </div>
+        </div>
+        <div class="small-card">
+          <div class="small-card-img blue" style="align-items:center;justify-content:center;">
+            <span style="color:rgba(255,255,255,0.35);font-size:11px;font-style:italic;">Coming soon</span>
+          </div>
+          <div class="small-card-body">
+            <h4 style="color:var(--text-muted);font-weight:400;font-style:italic;font-size:12px;">First article in progress</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="sidebar">
+  <div class="sidebar" id="about">
     <div class="about-box">
       <div class="avatar">SB</div>
       <h3>Seçil Bayar</h3>
-      <p class="lang-aware" data-tr="PhD, Çevre Mühendisliği. LLM Değerlendirme Uzmanı & AI Uzmanı. İstanbul." data-en="PhD, Environmental Engineering. LLM Evaluator & AI Specialist. Istanbul.">PhD, Çevre Mühendisliği. LLM Değerlendirme Uzmanı &amp; AI Uzmanı. İstanbul.</p>
+      <p>PhD, Environmental Engineering. LLM Evaluator &amp; AI Specialist. Istanbul.</p>
       <div class="social-row">
         <a href="https://linkedin.com" class="social-btn" target="_blank">in</a>
         <a href="https://github.com/secilovs" class="social-btn" target="_blank">gh</a>
       </div>
     </div>
     <div class="topics-box">
-      <div class="section-label lang-aware" data-tr="Konular" data-en="Topics">Konular</div>
-      <div class="topic-item"><span class="lang-aware" data-tr="Su Güvenliği" data-en="Water Security">Su Güvenliği</span><span class="topic-count">1</span></div>
-      <div class="topic-item"><span class="lang-aware" data-tr="İklim & Çatışma" data-en="Climate & Conflict">İklim & Çatışma</span><span class="topic-count">1</span></div>
-      <div class="topic-item"><span class="lang-aware" data-tr="Desalinasyon" data-en="Desalination">Desalinasyon</span><span class="topic-count">1</span></div>
-      <div class="topic-item"><span class="lang-aware" data-tr="AI Araçları" data-en="AI Tools">AI Araçları</span><span class="topic-count">1</span></div>
+      <div class="section-label">Topics</div>
+      <div class="topic-item"><span>Water Security</span><span class="topic-count">1</span></div>
+      <div class="topic-item"><span>Climate &amp; Conflict</span><span class="topic-count">1</span></div>
+      <div class="topic-item"><span>Desalination</span><span class="topic-count">1</span></div>
+      <div class="topic-item"><span>AI Tools</span><span class="topic-count">0</span></div>
     </div>
-    <div class="section-label lang-aware" data-tr="Son Güncelleme" data-en="Latest Update">Son Güncelleme</div>
-    <div class="update-box lang-aware" data-tr="Mart 2026 — Yeni makale: Savaşın Görünmez Cephesi: Su." data-en="March 2026 — New article: The Silent Front: Water.">Mart 2026 — Yeni makale: Savaşın Görünmez Cephesi: Su.</div>
+    <div class="section-label">Latest Update</div>
+    <div class="update-box">March 2026 — New article: The Silent Front: Water.</div>
   </div>
 </div>
 
 <script>
-var currentLang = 'tr';
-function setLang(lang, e) {
-  currentLang = lang;
-  document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
-  e.target.classList.add('active');
-  document.querySelectorAll('.lang-aware').forEach(function(el){ if(el.dataset[lang]) el.textContent = el.dataset[lang]; });
-  document.querySelectorAll('.lang-tr').forEach(function(el){ el.style.display = lang==='tr'?'block':'none'; });
-  document.querySelectorAll('.lang-en').forEach(function(el){ el.style.display = lang==='en'?'block':'none'; });
-  var btn = document.querySelector('.read-more-btn');
-  if(btn){ var open = document.getElementById('article-main').classList.contains('open'); btn.textContent = open ? btn.dataset[lang+'Close'] : btn.dataset[lang+'Open']; }
-  var nameInput = document.getElementById('comment-name');
-  var textInput = document.getElementById('comment-text');
-  if(nameInput) nameInput.placeholder = lang==='tr'?'Adınız':'Your name';
-  if(textInput) textInput.placeholder = lang==='tr'?'Yorumunuzu yazın...':'Write your comment...';
-}
 function toggleArticle(btn) {
   var content = document.getElementById('article-main');
   var open = content.classList.toggle('open');
-  btn.textContent = open ? btn.dataset[currentLang+'Close'] : btn.dataset[currentLang+'Open'];
+  btn.textContent = open ? 'Close ↑' : 'Read Article ↓';
 }
 function submitComment() {
   var name = document.getElementById('comment-name').value.trim();
   var text = document.getElementById('comment-text').value.trim();
-  if(!name || !text) return;
+  if (!name || !text) return;
   var list = document.getElementById('comments-list');
   var now = new Date();
-  var dateStr = now.toLocaleDateString(currentLang==='tr'?'tr-TR':'en-US', {year:'numeric',month:'long',day:'numeric'});
+  var dateStr = now.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
   var item = document.createElement('div');
   item.className = 'comment-item';
   item.innerHTML = '<div class="comment-item-name">'+name+'</div><div class="comment-item-text">'+text+'</div><div class="comment-item-date">'+dateStr+'</div>';
