@@ -14,7 +14,6 @@ body {
   color: #2a1a1a;
 }
 
-/* NAVBAR */
 nav {
   position: absolute;
   top: 0; left: 0; right: 0;
@@ -43,7 +42,6 @@ nav {
 
 .nav-links a:hover { color: #f0e0cc; }
 
-/* HERO */
 .hero {
   position: relative;
   width: 100%;
@@ -56,7 +54,6 @@ nav {
   height: 100%;
 }
 
-/* MAIN LAYOUT */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -70,7 +67,6 @@ nav {
   padding: 48px 0;
 }
 
-/* SIDEBAR */
 .sidebar {
   position: sticky;
   top: 32px;
@@ -140,7 +136,6 @@ nav {
   border-radius: 10px;
 }
 
-/* POSTS */
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: 13px;
@@ -205,6 +200,12 @@ nav {
   margin-bottom: 16px;
 }
 
+.post-meta {
+  font-size: 12px;
+  color: #a08878;
+  margin-bottom: 12px;
+}
+
 .read-more {
   display: inline-block;
   font-size: 12px;
@@ -214,6 +215,152 @@ nav {
   text-decoration: none;
   border-bottom: 1px solid #7a3d2a;
   padding-bottom: 2px;
+  cursor: pointer;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+/* ARTICLE CONTENT */
+.article-full {
+  display: none;
+  padding: 32px;
+  border-top: 1px solid #e8d8c8;
+  grid-column: 1 / -1;
+}
+
+.article-full.open { display: block; }
+
+.article-full h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #2a1a1a;
+  margin: 28px 0 12px;
+}
+
+.article-full h2:first-child { margin-top: 0; }
+
+.article-full p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #3a2a2a;
+  margin-bottom: 16px;
+}
+
+.article-full .map-wrap {
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e8d8c8;
+}
+
+.article-full .references {
+  background: #faf6f1;
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin-top: 24px;
+}
+
+.article-full .references h3 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7a3d2a;
+  margin-bottom: 12px;
+}
+
+.article-full .references ol {
+  padding-left: 18px;
+}
+
+.article-full .references li {
+  font-size: 13px;
+  color: #7a6a5a;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.article-full .comment-section {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid #e8d8c8;
+}
+
+.article-full .comment-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #2a1a1a;
+  margin-bottom: 20px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #c8a882;
+  background: transparent;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  color: #2a1a1a;
+  outline: none;
+}
+
+.comment-form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.comment-submit {
+  align-self: flex-start;
+  background: #7a3d2a;
+  color: #f0e0cc;
+  border: none;
+  padding: 10px 28px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.comment-submit:hover { background: #5c2d1a; }
+
+.comment-item {
+  background: #fff;
+  border: 1px solid #e8d8c8;
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+
+.comment-item-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #7a3d2a;
+  margin-bottom: 4px;
+}
+
+.comment-item-text {
+  font-size: 14px;
+  color: #3a2a2a;
+  line-height: 1.6;
+}
+
+.comment-item-date {
+  font-size: 11px;
+  color: #a08878;
+  margin-top: 6px;
 }
 
 /* CONTACT */
@@ -280,7 +427,6 @@ nav {
 
 .submit-btn:hover { background: #5c2d1a; }
 
-/* FOOTER */
 footer {
   background: #2a1a1a;
   color: #c8a882;
@@ -298,7 +444,7 @@ footer {
   <div class="nav-logo">An Unfinished Journey</div>
   <div class="nav-links">
     <a href="#environment">Environmental Research Brief</a>
-   <a href="#ai">AI Progress</a>
+    <a href="#ai">AI Progress</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
@@ -374,11 +520,11 @@ footer {
   <aside class="sidebar">
     <div class="about-box" id="about">
       <h3>About</h3>
-      <p>Secil Bayar.PhD in Environmental Engineering. LLM Evaluation Specialist | Evaluation Prompts & Hallucination Detection. Writing at the intersection of ecology, data, and artificial intelligence.</p>
+      <p>Secil Bayar. PhD in Environmental Engineering. LLM Evaluation Specialist | Evaluation Prompts & Hallucination Detection. Writing at the intersection of ecology, data, and artificial intelligence.</p>
     </div>
     <div class="categories-box">
       <h3>Categories</h3>
-      <a href="#environment" class="cat-link">🌿 Environmental Research <span>0</span></a>
+      <a href="#environment" class="cat-link">🌿 Environmental Research <span>1</span></a>
       <a href="#ai" class="cat-link">🤖 AI Progress <span>0</span></a>
     </div>
   </aside>
@@ -387,13 +533,124 @@ footer {
   <main>
     <div id="environment">
       <div class="section-title">Environmental Research Brief</div>
-      <div class="post-card">
-        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=480&q=80" alt="Environment">
-        <div class="post-card-body">
-          <div class="post-category">Environment</div>
-          <h2>Your first post title here</h2>
-          <p>A short description of your article goes here. Two or three sentences to draw the reader in.</p>
-          <a href="#" class="read-more">Read More</a>
+      <div class="post-card" style="display:block;">
+        <div style="display:grid; grid-template-columns:240px 1fr; gap:24px;">
+          <img src="water.jpg" alt="Northern Iran valley — water scarcity in the Middle East">
+          <div class="post-card-body">
+            <div class="post-category">Water Security</div>
+            <h2>The Silent Front: Water</h2>
+            <p>Strikes on Gulf desalination plants reveal just how fragile water security is in a region already under severe climate stress.</p>
+            <div class="post-meta">Seçil Bayar &nbsp;·&nbsp; March 2026 &nbsp;·&nbsp; 8 min read</div>
+            <button class="read-more" onclick="toggleArticle()">Read More</button>
+          </div>
+        </div>
+
+        <div class="article-full" id="article-main">
+
+          <h2>The Gulf's Paradox</h2>
+          <p>March 2026. As conflicts escalated across the Middle East, the world's eyes turned to missiles and fighter jets. But on the quieter front of this war, there was a very different target: water.</p>
+          <p>The Gulf region sits on some of the world's most enormous oil and gas reserves — wealth that shapes the global economy. Yet beneath that same surface lies an equally serious absence: fresh water. The world's richest oil nations are, at the same time, among its most water-scarce.</p>
+
+          <h2>Water Scarcity</h2>
+          <p>Annual rainfall across the Gulf averages between 70 and 130 millimeters — and in some areas, it barely rains at all. According to NASA, the Middle East has been experiencing its worst drought in 900 years since 1998. Seven of the world's ten most water-stressed countries are in this region, where annual water withdrawals reach up to eight times the available renewable supply. The UN World Water Development Report 2024 found that 83% of the region's population lives under extremely high water stress. Bahrain, Kuwait, Oman, and Qatar rank among the most critical cases.</p>
+
+          <h2>Desalination: A Vital Solution, a Fragile System</h2>
+          <p>Faced with these conditions, Gulf states have been turning to desalination — converting seawater into drinking water — since 1938. Today, 90% of Kuwait's drinking water, 86% of Oman's, and 70% of Saudi Arabia's comes from these plants. The Gulf alone accounts for roughly 40% of the world's desalinated water, with over 400 facilities operating along its coastline. But the system is deeply fragile: entire cities depend on just a handful of large plants. Most of them run alongside power stations — meaning an attack on the energy grid can knock out water production just as quickly. This vulnerability isn't new. During the 1990–1991 Gulf War, Iraqi forces deliberately destroyed much of Kuwait's desalination capacity. That precedent has come back into sharp focus.</p>
+
+          <h2>Attacks: A Region Under Threat</h2>
+          <p>The March 2026 conflict struck water infrastructure directly. The US launched missiles from the Jufair base in Bahrain, hitting a desalination plant on Iran's Qeshm Island at the entrance to the Strait of Hormuz. According to Iran's Foreign Ministry, the strike disrupted water supply to 30 villages, forcing thousands to turn to unsafe water sources and significantly raising the risk of waterborne illness in the area. Kaveh Madani, Director of the UN University's Institute for Water, Environment and Health, called the attack "a wake-up call for the region."</p>
+          <p>But Qeshm was not the only target. In the same period, Iran was reported to have damaged a desalination plant in Bahrain with a drone. Missile debris landed near a power and water complex in Fujairah, UAE. A strike on Dubai's Jebel Ali port came dangerously close to the city's 43 desalination units, which produce over 600 million cubic meters of water annually. And in Kuwait, debris from an intercepted drone caused a fire at the Doha West Power and Water Station.</p>
+          <p>Analysts point out that none of this is coincidental: water facilities are fixed, coastal, high-value targets — strategically hard to resist. With Iran reportedly capable of producing around 10,000 drones per month, the scale of the threat becomes even clearer.</p>
+          <p>These attacks also raise serious questions under international law. The Geneva Conventions explicitly prohibit attacks on water facilities essential to civilian survival.</p>
+
+          <div class="map-wrap">
+            <svg width="100%" viewBox="0 0 960 700" style="font-family:sans-serif;display:block;">
+              <rect x="3" y="3" width="954" height="694" rx="10" fill="none" stroke="#7a3d2a" stroke-width="1.5"/>
+              <text x="480" y="32" text-anchor="middle" fill="#2a1a1a" font-size="14" font-weight="700">March 2026 — Water Infrastructure Under Attack</text>
+              <text x="480" y="50" text-anchor="middle" fill="#7a6a5a" font-size="11">Five critical sites threatened across the Gulf region</text>
+              <ellipse cx="480" cy="340" rx="205" ry="88" fill="#b8d4e8"/>
+              <ellipse cx="668" cy="306" rx="58" ry="28" fill="#8fb8d4"/>
+              <path d="M215,215 Q288,190 365,198 Q442,205 512,193 Q574,184 632,206 Q679,222 699,260 Q687,281 664,291 Q631,285 598,291 Q564,297 540,308 Q518,318 495,322 Q470,320 445,314 Q419,310 393,307 Q362,304 331,307 Q308,311 285,315 Q263,318 240,310 Q218,297 204,281 Q190,262 215,237Z" fill="#e8f0d8" stroke="#c4bfb0" stroke-width="0.8"/>
+              <path d="M192,358 Q235,344 278,338 Q322,333 366,335 Q410,336 453,335 Q496,333 536,330 Q572,327 603,324 Q634,321 654,327 Q665,344 658,366 Q641,388 606,398 Q562,408 517,412 Q463,415 407,416 Q351,417 298,415 Q252,408 219,397 Q188,385 177,369Z" fill="#f5e6d0" stroke="#c4bfb0" stroke-width="0.8"/>
+              <ellipse cx="326" cy="338" rx="18" ry="12" fill="#f0d8e0" stroke="#c4bfb0" stroke-width="0.8"/>
+              <path d="M180,296 Q194,283 210,287 Q221,295 224,311 Q222,331 211,344 Q200,354 188,356 Q175,351 172,333 Q169,314 180,296Z" fill="#e8ddf5" stroke="#c4bfb0" stroke-width="0.8"/>
+              <path d="M632,206 Q666,210 699,224 Q727,237 748,255 Q764,270 767,290 Q764,310 752,322 Q737,333 716,337 Q694,340 674,335 Q655,330 639,321 Q622,311 610,302 Q599,294 595,288 Q602,281 616,275 Q632,268 645,259 Q660,247 668,233 Q657,217 635,210 Q633,207 632,206Z" fill="#d8eee0" stroke="#c4bfb0" stroke-width="0.8"/>
+              <text x="438" y="244" text-anchor="middle" fill="#6b7a85" font-size="11" font-style="italic">IRAN</text>
+              <text x="422" y="382" text-anchor="middle" fill="#6b7a85" font-size="10" font-style="italic">SAUDI ARABIA</text>
+              <text x="196" y="324" text-anchor="middle" fill="#6b7a85" font-size="9" font-style="italic">KWT</text>
+              <text x="700" y="268" text-anchor="middle" fill="#6b7a85" font-size="9" font-style="italic">UAE</text>
+              <text x="326" y="340" text-anchor="middle" fill="#6b7a85" font-size="8">BHR</text>
+              <text x="554" y="294" text-anchor="middle" fill="#4a6878" font-size="9" font-style="italic">Strait of Hormuz</text>
+              <text x="420" y="318" text-anchor="middle" fill="#4a6878" font-size="9" font-style="italic">The Gulf</text>
+              <line x1="572" y1="268" x2="80" y2="100" stroke="#c0392b" stroke-width="1" stroke-dasharray="5 3"/>
+              <line x1="315" y1="334" x2="80" y2="230" stroke="#c0392b" stroke-width="1" stroke-dasharray="5 3"/>
+              <line x1="695" y1="232" x2="790" y2="110" stroke="#e67e22" stroke-width="1" stroke-dasharray="5 3"/>
+              <line x1="685" y1="318" x2="790" y2="460" stroke="#e67e22" stroke-width="1" stroke-dasharray="5 3"/>
+              <line x1="188" y1="340" x2="80" y2="490" stroke="#e67e22" stroke-width="1" stroke-dasharray="5 3"/>
+              <rect x="20" y="65" width="178" height="44" rx="5" fill="#2a1a1a"/>
+              <text x="30" y="82" fill="white" font-size="11" font-weight="500">Qeshm Island — Iran</text>
+              <text x="30" y="98" fill="#c8a882" font-size="10">US airstrike · 30 villages</text>
+              <rect x="20" y="198" width="178" height="44" rx="5" fill="#2a1a1a"/>
+              <text x="30" y="215" fill="white" font-size="11" font-weight="500">Bahrain Desalination Plant</text>
+              <text x="30" y="231" fill="#c8a882" font-size="10">Iranian drone strike</text>
+              <rect x="762" y="78" width="178" height="44" rx="5" fill="#2a1a1a"/>
+              <text x="772" y="95" fill="white" font-size="11" font-weight="500">Fujairah F1 — UAE</text>
+              <text x="772" y="111" fill="#f0c070" font-size="10">Missile debris nearby</text>
+              <rect x="762" y="430" width="168" height="44" rx="5" fill="#2a1a1a"/>
+              <text x="772" y="447" fill="white" font-size="11" font-weight="500">Jebel Ali — Dubai</text>
+              <text x="772" y="463" fill="#f0c070" font-size="10">Strike dangerously close</text>
+              <rect x="20" y="460" width="178" height="44" rx="5" fill="#2a1a1a"/>
+              <text x="30" y="477" fill="white" font-size="11" font-weight="500">Doha West — Kuwait</text>
+              <text x="30" y="493" fill="#f0c070" font-size="10">Drone debris caused fire</text>
+              <circle cx="580" cy="272" r="9" fill="#c0392b" stroke="white" stroke-width="2"/>
+              <text x="580" y="276" text-anchor="middle" fill="white" font-size="10" font-weight="500">1</text>
+              <circle cx="326" cy="338" r="9" fill="#c0392b" stroke="white" stroke-width="2"/>
+              <text x="326" y="342" text-anchor="middle" fill="white" font-size="10" font-weight="500">2</text>
+              <circle cx="700" cy="226" r="9" fill="#e67e22" stroke="white" stroke-width="2"/>
+              <text x="700" y="230" text-anchor="middle" fill="white" font-size="10" font-weight="500">3</text>
+              <circle cx="690" cy="335" r="9" fill="#e67e22" stroke="white" stroke-width="2"/>
+              <text x="690" y="339" text-anchor="middle" fill="white" font-size="10" font-weight="500">4</text>
+              <circle cx="196" cy="334" r="9" fill="#e67e22" stroke="white" stroke-width="2"/>
+              <text x="196" y="338" text-anchor="middle" fill="white" font-size="10" font-weight="500">5</text>
+              <rect x="380" y="590" width="200" height="64" rx="6" fill="#2a1a1a"/>
+              <circle cx="400" cy="609" r="7" fill="#c0392b" stroke="white" stroke-width="1.5"/>
+              <text x="414" y="613" fill="white" font-size="11">Direct damage</text>
+              <circle cx="400" cy="635" r="7" fill="#e67e22" stroke="white" stroke-width="1.5"/>
+              <text x="414" y="639" fill="white" font-size="11">Near miss</text>
+            </svg>
+          </div>
+
+          <h2>Regional and Global Implications</h2>
+          <p>The impact of these strikes extends well beyond the region. Iran's closure of the Strait of Hormuz disrupted roughly 20% of global oil trade, forcing tankers to reroute around Africa. Since about a third of the world's fertilizer trade also passes through the strait, global food prices have come under significant pressure. Experts warn that the real crisis may still be coming — in the form of acute water shortages over the months ahead. Ed Cullinane of Global Water Intelligence puts it plainly: with ongoing strikes, an economic crisis, and a serious water shortage all converging, it is hard to even imagine how this summer will unfold.</p>
+
+          <div class="references">
+            <h3>References</h3>
+            <ol>
+              <li>UN World Water Development Report, 2024</li>
+              <li>NASA Jet Propulsion Laboratory — Middle East Drought Study, 2022</li>
+              <li>World Resources Institute — Aqueduct Water Risk Atlas, 2023</li>
+              <li>Global Water Intelligence — Gulf Desalination Report</li>
+              <li>Baker Institute / Rice University — GCC Water Security Analysis</li>
+              <li>CSIS — Water and Conflict in the Middle East</li>
+              <li>Pacific Institute — Water Conflict Chronology, 2023</li>
+              <li>UN University Institute for Water, Environment and Health — Kaveh Madani, 2026</li>
+              <li>Sembcorp Industries — Fujairah F1 Statement, March 2026</li>
+              <li>Geneva Conventions Additional Protocol I, Article 54 — ICRC</li>
+              <li>ScienceDirect — Desalination and Climate Change, 2025</li>
+              <li>Peter Gleick — Water as a Weapon of War, Springer, 2019</li>
+            </ol>
+          </div>
+
+          <div class="comment-section">
+            <h3>Comments</h3>
+            <div class="comment-form">
+              <input type="text" id="comment-name" placeholder="Your name">
+              <textarea id="comment-text" placeholder="Write your comment..."></textarea>
+              <button class="comment-submit" onclick="submitComment()">Submit</button>
+            </div>
+            <div id="comments-list"></div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -403,7 +660,7 @@ footer {
       <div class="post-card">
         <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=480&q=80" alt="AI">
         <div class="post-card-body">
-          <div class="section-title">AI</div>
+          <div class="post-category">AI</div>
           <h2>Your first AI post title here</h2>
           <p>A short description of your article goes here. Two or three sentences to draw the reader in.</p>
           <a href="#" class="read-more">Read More</a>
@@ -434,6 +691,30 @@ footer {
 <footer>
   © 2026 An Unfinished Journey
 </footer>
+
+<script>
+function toggleArticle() {
+  var content = document.getElementById('article-main');
+  var btn = document.querySelector('.read-more');
+  var open = content.classList.toggle('open');
+  btn.textContent = open ? 'Close ↑' : 'Read More';
+}
+
+function submitComment() {
+  var name = document.getElementById('comment-name').value.trim();
+  var text = document.getElementById('comment-text').value.trim();
+  if (!name || !text) return;
+  var list = document.getElementById('comments-list');
+  var now = new Date();
+  var dateStr = now.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+  var item = document.createElement('div');
+  item.className = 'comment-item';
+  item.innerHTML = '<div class="comment-item-name">'+name+'</div><div class="comment-item-text">'+text+'</div><div class="comment-item-date">'+dateStr+'</div>';
+  list.appendChild(item);
+  document.getElementById('comment-name').value = '';
+  document.getElementById('comment-text').value = '';
+}
+</script>
 
 </body>
 </html>
