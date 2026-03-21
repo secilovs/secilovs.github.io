@@ -525,7 +525,7 @@ footer {
     </div>
     <div class="categories-box">
       <h3>Categories</h3>
-      <a href="#environment" class="cat-link">🌿 Environmental Research <span>1</span></a>
+      <a href="#environment" class="cat-link">🌿 Environmental Research <span>2</span></a>
       <a href="#ai" class="cat-link">🤖 AI Progress <span>0</span></a>
     </div>
   </aside>
@@ -656,6 +656,59 @@ footer {
       </div>
     </div>
 
+    <div style="margin-top: 32px;">
+      <div class="post-card" style="display:block;">
+        <div style="display:grid; grid-template-columns:240px 1fr; gap:24px;">
+          <img src="urban.jpg" alt="Urban green space from above">
+          <div class="post-card-body">
+            <div class="post-category">Urban Environment</div>
+            <h2>Green for Whom?</h2>
+            <p>Green spaces are often seen as universally beneficial — but their impact depends on how they are designed, who they serve, and what gets lost when they arrive.</p>
+            <div class="post-meta">Seçil Bayar &nbsp;·&nbsp; March 2026 &nbsp;·&nbsp; 6 min read</div>
+            <button class="read-more" onclick="toggleArticle2()">Read More</button>
+          </div>
+        </div>
+
+        <div class="article-full" id="article-green">
+          <p>When a new park opens in a city, it is almost always seen as a positive development. More trees, more space, cleaner air — it sounds like something no one would argue against. And in most planning discussions, green spaces are treated exactly this way: as simple, universally beneficial interventions.</p>
+          <p>But the reality is more complicated.</p>
+          <p>Research consistently shows that being in natural environments improves individual well-being. People feel less stressed, mentally more refreshed, and generally better after spending time in green spaces. These effects are well established. What is less clear — and often taken for granted — is whether these individual benefits translate into stronger communities.</p>
+          <p>They don't. At least, not automatically.</p>
+          <p>Just because a park exists nearby does not mean people will trust each other more, feel a stronger sense of belonging, or build meaningful social connections. These outcomes depend on other factors: how the space is designed, whether it feels safe, who uses it, and whether people actually want to spend time there. In many cases, what matters is not how large a green space is, but how it is experienced. A small, well-maintained, thoughtfully designed space can offer more than a large but neglected one.</p>
+          <p>From an environmental engineering perspective, this distinction feels familiar. It is not enough for something to exist as infrastructure; it has to function properly within a system. Water, for example, is not useful simply because it is present somewhere. It needs to be accessible, evenly distributed, and continuously maintained. Green spaces operate in a similar way. Their physical presence does not guarantee their social function.</p>
+          <p>And in some cases, the effects go in the opposite direction.</p>
+          <p>One of the more uncomfortable findings in recent studies is the phenomenon of green gentrification. When new parks or green investments make an area more attractive, housing prices tend to rise. Over time, this can lead to the displacement of long-term residents, particularly lower-income communities. The process is often gradual and difficult to trace directly, but the outcome is clear: the people who were supposed to benefit from these improvements may no longer be there to experience them.</p>
+          <p>What is lost in this process is not just physical proximity to green space, but something less visible — social ties, familiarity, and a sense of belonging built over years. These losses rarely show up in data, but they shape how communities function.</p>
+          <p>None of this means that green spaces are not valuable. They clearly are. But their benefits are not automatic, and they are not equally distributed. Whether a green space supports well-being and social cohesion depends on decisions made long before it is built — decisions about design, accessibility, maintenance, and who is included in the planning process.</p>
+          <p>Treating green spaces as neutral or universally positive overlooks these dynamics. They are not just environmental features; they are part of a broader social and political system.</p>
+          <p>So the question is no longer whether cities need more green space. That part is obvious.</p>
+          <p>The more important question is who that green space is actually for.</p>
+
+          <div class="references">
+            <h3>References</h3>
+            <ol>
+              <li>Jennings et al. (2024). Urban Forestry & Urban Greening, 85, 127977.</li>
+              <li>Qi et al. (2024). Landscape and Urban Planning, 242, 104905.</li>
+              <li>Quinton et al. (2022). Landscape and Urban Planning, 223, 104415.</li>
+              <li>Jelks et al. (2021). Int. J. Environmental Research and Public Health, 18(17).</li>
+              <li>Ünal et al. (2022). Journal of Environmental Psychology, 80, 101753.</li>
+              <li>Reese et al. (2022). Environment and Behavior, 54(10).</li>
+            </ol>
+          </div>
+
+          <div class="comment-section">
+            <h3>Comments</h3>
+            <div class="comment-form">
+              <input type="text" id="comment-name-2" placeholder="Your name">
+              <textarea id="comment-text-2" placeholder="Write your comment..."></textarea>
+              <button class="comment-submit" onclick="submitComment2()">Submit</button>
+            </div>
+            <div id="comments-list-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="ai" style="margin-top: 48px;">
       <div class="section-title">AI Progress</div>
       <div class="post-card">
@@ -699,6 +752,28 @@ function toggleArticle() {
   var btn = document.querySelector('.read-more');
   var open = content.classList.toggle('open');
   btn.textContent = open ? 'Close ↑' : 'Read More';
+}
+
+function toggleArticle2() {
+  var content = document.getElementById('article-green');
+  var btns = document.querySelectorAll('.read-more');
+  var open = content.classList.toggle('open');
+  btns[1].textContent = open ? 'Close ↑' : 'Read More';
+}
+
+function submitComment2() {
+  var name = document.getElementById('comment-name-2').value.trim();
+  var text = document.getElementById('comment-text-2').value.trim();
+  if (!name || !text) return;
+  var list = document.getElementById('comments-list-2');
+  var now = new Date();
+  var dateStr = now.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+  var item = document.createElement('div');
+  item.className = 'comment-item';
+  item.innerHTML = '<div class="comment-item-name">'+name+'</div><div class="comment-item-text">'+text+'</div><div class="comment-item-date">'+dateStr+'</div>';
+  list.appendChild(item);
+  document.getElementById('comment-name-2').value = '';
+  document.getElementById('comment-text-2').value = '';
 }
 
 function submitComment() {
