@@ -526,7 +526,7 @@ footer {
     <div class="categories-box">
       <h3>Categories</h3>
       <a href="#environment" class="cat-link">🌿 Environmental Research <span>2</span></a>
-      <a href="#ai" class="cat-link">🤖 AI Progress <span>0</span></a>
+      <a href="#ai" class="cat-link">🤖 AI Progress <span>1</span></a>
     </div>
   </aside>
 
@@ -711,13 +711,72 @@ footer {
 
     <div id="ai" style="margin-top: 48px;">
       <div class="section-title">AI Progress</div>
-      <div class="post-card">
-        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=480&q=80" alt="AI">
-        <div class="post-card-body">
-          <div class="post-category">AI</div>
-          <h2>Your first AI post title here</h2>
-          <p>A short description of your article goes here. Two or three sentences to draw the reader in.</p>
-          <a href="#" class="read-more">Read More</a>
+      <div class="post-card" style="display:block;">
+        <div style="display:grid; grid-template-columns:240px 1fr; gap:24px;">
+          <img src="AI_progress1.jpg" alt="AI neural network brain visualization">
+          <div class="post-card-body">
+            <div class="post-category">AI & Science</div>
+            <h2>AI Isn't Replacing Science — It's Reducing the People in It</h2>
+            <p>Projects that once required teams are now moving faster, with fewer people. The lab is changing — and the question is no longer whether AI will affect research careers, but which ones, how fast, and what comes next.</p>
+            <div class="post-meta">Seçil Bayar &nbsp;·&nbsp; March 2026 &nbsp;·&nbsp; 7 min read</div>
+            <button class="read-more" onclick="toggleArticle3()">Read More</button>
+          </div>
+        </div>
+
+        <div class="article-full" id="article-ai">
+
+          <p>At some point, I realized something: projects that once required teams were now moving faster, with fewer people. Work that used to depend on groups was turning into processes. Eventually, a question became unavoidable:</p>
+          <p><em>Where do I stand in this?</em></p>
+
+          <h2>The Myth of Safety</h2>
+          <p>For a long time, there was a common belief: AI handles repetitive work, but science is different. It analyzes, interprets, discovers. Researchers would always be needed.</p>
+          <p>Then came AlphaFold.</p>
+          <p>Predicting protein structures had been one of biology's hardest problems. It required years of lab work, expensive equipment, and specialized teams. AlphaFold reduced that process to hours — and produced results at a scale no human team could match.</p>
+          <p>It was a breakthrough. And at the same time, a quiet reduction of roles.</p>
+          <p>Crystallography workloads dropped. Parts of bioinformatics became automated. Computational modeling teams began to shrink — not disappearing, but consolidating. From the outside, it didn't look like disruption. It wasn't a headline.</p>
+          <p>But the reality was simple: fewer people were needed to do the same work.</p>
+          <p>And this isn't limited to biology. Environmental modeling, climate analysis, molecular simulations, materials science — anywhere work is driven by large datasets and pattern recognition, AI is already embedded in the system.</p>
+
+          <h2>Where the Pressure Is Highest</h2>
+          <p>Not all roles are affected equally.</p>
+          <p>Data analysts are among the most visibly impacted. Data cleaning, structuring, processing — once daily tasks — can now be done in minutes. Computational modelers face similar pressure. Simulations that once required deep expertise are increasingly handled with AI-assisted tools. Literature reviewers are also affected — systematic reviews that used to take months are now significantly faster.</p>
+          <p>The common thread is clear: if a role is repetitive, pattern-based, and data-intensive — AI is already inside it.</p>
+          <p>This doesn't mean these roles will disappear. It means fewer people will be needed to do them.</p>
+
+          <h2>Less Exposed — For Now</h2>
+          <p>Some roles are more resistant, at least for now. Field researchers. Experimental scientists. Roles that require direct interaction with complex physical environments. AI still struggles with the physical world, uncertainty, and human interaction.</p>
+          <p>But "for now" matters.</p>
+
+          <h2>From the Inside</h2>
+          <p>I'm not observing this from the outside. I'm inside it.</p>
+          <p>I've been working in LLM evaluation — analyzing outputs, identifying errors, assessing quality. For a while, the work felt stable. Then something shifted. Parts of the evaluation process started becoming automated. Tasks I used to do manually were now handled by other models.</p>
+          <p>This wasn't surprising. The speed was.</p>
+          <p>At that point, the real question wasn't whether AI would affect my work. It was how I would position myself within that change.</p>
+          <p>I started moving toward areas like RAG systems, agent architectures, and fine-tuning. Not because they are "safe," but because they sit closer to where decisions are made — not just where outputs are evaluated.</p>
+          <p>In AI, there is no safe place. There is only positioning.</p>
+
+          <h2>What Actually Matters</h2>
+          <p>"Learn AI and you'll be fine" is too simplistic.</p>
+          <p>The real question is this: which part of your work is pattern recognition, and which part is judgment?</p>
+          <p>AI is extremely good at replicating patterns. Judgment is still harder to replace.</p>
+          <p>Domain expertise still matters — but not on its own. It needs to be combined with technical understanding and critical thinking. For those who can build that combination, the field isn't shrinking.</p>
+          <p>It's transforming.</p>
+
+          <h2>The Real Shift</h2>
+          <p>The lab is changing. Not because science is disappearing — but because fewer people are needed to do the same work.</p>
+          <p>The question is no longer whether AI will affect science.</p>
+          <p><em>It's where you will stand when it does.</em></p>
+
+          <div class="comment-section">
+            <h3>Comments</h3>
+            <div class="comment-form">
+              <input type="text" id="comment-name-3" placeholder="Your name">
+              <textarea id="comment-text-3" placeholder="Write your comment..."></textarea>
+              <button class="comment-submit" onclick="submitComment3()">Submit</button>
+            </div>
+            <div id="comments-list-3"></div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -774,6 +833,28 @@ function submitComment2() {
   list.appendChild(item);
   document.getElementById('comment-name-2').value = '';
   document.getElementById('comment-text-2').value = '';
+}
+
+function toggleArticle3() {
+  var content = document.getElementById('article-ai');
+  var btns = document.querySelectorAll('.read-more');
+  var open = content.classList.toggle('open');
+  btns[2].textContent = open ? 'Close ↑' : 'Read More';
+}
+
+function submitComment3() {
+  var name = document.getElementById('comment-name-3').value.trim();
+  var text = document.getElementById('comment-text-3').value.trim();
+  if (!name || !text) return;
+  var list = document.getElementById('comments-list-3');
+  var now = new Date();
+  var dateStr = now.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+  var item = document.createElement('div');
+  item.className = 'comment-item';
+  item.innerHTML = '<div class="comment-item-name">'+name+'</div><div class="comment-item-text">'+text+'</div><div class="comment-item-date">'+dateStr+'</div>';
+  list.appendChild(item);
+  document.getElementById('comment-name-3').value = '';
+  document.getElementById('comment-text-3').value = '';
 }
 
 function submitComment() {
